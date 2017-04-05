@@ -80,7 +80,6 @@ public class GlideImageLoaderStrategy implements ImageLoaderStrategy {
         //去掉动画 解决与CircleImageView冲突的问题 这个只是其中的一个解决方案
         //使用SOURCE 图片load结束再显示而不是先显示缩略图再显示最终的图片（导致图片大小不一致变化）
         final long startTime = System.currentTimeMillis();
-
         Glide.with(context)
                 .load(parameter.getImageUrl())
                 .error(parameter.getErrorHolder())//load失敗的Drawable
